@@ -20,7 +20,7 @@ read -p "  [YAML VARIABLE]: " VARIABLE2
 read -p "  [YAML VARIABLE]: " VARIABLE3
 read -p "  [DOCKER NAME]:  " DOCKERNAME
 
-# Removes the container with the same name that is running #
+# Removes the container with the same name that is running. #
 
 if docker ps -f "name=$DOCKERNAME" > /dev/null
 then 
@@ -28,12 +28,12 @@ then
 	echo "  Docker removed."
 fi 
 
-# Updates the image #
+# Updates the image. #
 
 echo -e "\n  Updating the image..."
 echo "  Image updated. $(docker pull [YOUR IMAGE] > /dev/null)"
 
-# Creates a folder with a standard name: "docker-$DOCKERNAME" #
+# Creates a folder with a standard name: "docker-$DOCKERNAME". #
 
 echo "  Folder created. $(mkdir docker-$DOCKERNAME)"
 cd ./docker-$DOCKERNAME
@@ -71,7 +71,7 @@ then
 fi
 if [ "$SUCESS" != 0 ]
 then
-	echo -e "\n  Error.\n"
-	rm -f docker-compose.yaml
-	rm -f error.txt
+       echo -e "\n  Error.\n"
+       rm -f docker-compose.yaml
+       rm -f error.txt
 fi
