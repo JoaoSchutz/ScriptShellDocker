@@ -59,19 +59,17 @@ services:
     ports:
      - \"19001:8090\""  > docker-compose.yaml) "
 
-# Sobe o container #
-
 echo "  Taking the log... $(docker-compose -f docker-compose.yaml up > log.txt 2> error.txt)" 
 
 # CAT command to make your validation of sucess. #
 cat log.txt | grep "X" > /dev/null 
-SUCESSO="$(echo $?)"
-if [ "$SUCESSO" = 0 ]
+SUCESS="$(echo $?)"
+if [ "$SUCESS" = 0 ]
 then
        echo -e "\n  Sucess.\n"
        exit 0
 fi
-if [ "$SUCESSO" != 0 ]
+if [ "$SUCESS" != 0 ]
 then
 	echo -e "\n  Error.\n"
 	rm -f docker-compose.yaml
