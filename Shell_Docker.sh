@@ -2,7 +2,7 @@
 echo ""
 echo "           ###################################"
 echo "           #                                 #"
-echo "           #        [YOUR DOCKER NAME]       #"
+echo "           #        [YOUR CODE NAME]         #"
 echo "           #                                 #"
 echo "           ###################################"
 echo ""
